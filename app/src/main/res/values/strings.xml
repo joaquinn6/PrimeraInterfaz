@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PrimeraInterfaz</string>
+
+    <array name="datos">
+        <item>Entero</item>
+        <item>Binario</item>
+        <item>Exadecimal</item>
+        <item>String</item>
+    </array>
+</resources>

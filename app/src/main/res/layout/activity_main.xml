@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Examen de Android"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textStyle="bold|italic"
+        android:id="@+id/tv1"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv1"
+        android:id="@+id/scroll"
+        android:layout_above="@id/btnEnviar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) ¿Con que propieda se activa la mascara de datos a un EditText?"
+                android:id="@+id/tv2"/>
+            <RadioGroup
+                android:id="@+id/rgMascara"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Type"
+                    android:id="@+id/rbType"/>
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Mask"
+                    android:id="@+id/rbMask"/>
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="inputType"
+                    android:id="@+id/rbinputType"/>
+            </RadioGroup>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2) ¿Como se hace para que un conjunto de RadioButton no se marquen al mismo tiempo?"
+                android:id="@+id/tv3"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rgRadio">
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Se agrupan en un RadioGroup"
+                    android:id="@+id/rbAgrupan"/>
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Se coloca el mismo ID"
+                    android:id="@+id/rbID"/>
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Se realiza mediante codigo"
+                    android:id="@+id/rbCodigo"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3) ¿Como se considera un ID en android cuando se compila?"
+                android:id="@+id/tv4"/>
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sId"
+                android:entries="@array/datos"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4) ¿Con que se determina el ancho y alto de una vista?"
+                android:id="@+id/tv5"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rgDimensiones">
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="dp"
+                    android:id="@+id/rbDp"/>
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="match_parent"
+                    android:id="@+id/rbMatch"/>
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="wrap_content"
+                    android:id="@+id/rbWrap"/>
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Todas las anteriores"
+                    android:id="@+id/rbAll"/>
+            </RadioGroup>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5) ¿Como se llama el control para fechas en Android?"
+                android:id="@+id/tv6"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rgFecha">
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DateTimePicker"
+                    android:id="@+id/rbDateTimePicker"/>
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Picker"
+                    android:id="@+id/rbPicker"/>
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DatePicker"
+                    android:id="@+id/rbDatePicker"/>
+            </RadioGroup>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6) ¿Como se llama el control de Tiempo en Android?"
+                android:id="@+id/tv7"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rgTiempo">
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TimePicker"
+                    android:id="@+id/rbTimePicker"/>
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PickerTime"
+                    android:id="@+id/rbPickerTime"/>
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DateTime"
+                    android:id="@+id/rbDateTime"/>
+            </RadioGroup>
+
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enviar"
+        android:id="@+id/btnEnviar"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
